@@ -1,0 +1,27 @@
+{
+  "name": "snaked-js",
+  "version": "1.0.0",
+  "description": "Lightweight high-performance wrapper for accessing camelCase JavaScript objects using snake_case syntax.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "converter",
+    "camelCase",
+    "syntax",
+    "snake",
+    "style",
+    "pep8",
+    "code",
+    "case"
+  ],
+  "author": "Squirrel-Preslash",
+  "license": "MIT",
+  "dependencies": {
+    "stringcase": "^4.3.1"
+  },
+  "devDependencies": {
+    "jest": "^26.4.0"
+  }
+}
