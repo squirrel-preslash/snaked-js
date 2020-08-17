@@ -1,3 +1,5 @@
+[![Test Status](https://github.com/squirrel-preslash/snaked-js/workflows/Test%20Snaked/badge.svg)](https://github.com/squirrel-preslash/snaked-js/actions)
+
 Slim. Beautiful. Snaked.
 
 **This module is also available for Python as `snaked-py`.**
