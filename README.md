@@ -1,4 +1,7 @@
 [![Test Status](https://github.com/squirrel-preslash/snaked-js/workflows/Test%20Snaked/badge.svg)](https://github.com/squirrel-preslash/snaked-js/actions)
+![npm](https://img.shields.io/npm/v/snaked-js)
+![npm dependency](https://img.shields.io/npm/dependency-version/snaked-js/stringcase)
+![ECMAScript version](https://img.shields.io/badge/ECMAScript-6-informational)
 
 Slim. Beautiful. Snaked.
 
