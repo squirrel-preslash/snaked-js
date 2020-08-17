@@ -1,6 +1,6 @@
 {
   "name": "snaked-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight high-performance wrapper for accessing camelCase JavaScript objects using snake_case syntax.",
   "repository": "squirrel-preslash/snaked-js",
   "main": "index.js",
