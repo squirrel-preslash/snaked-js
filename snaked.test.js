@@ -69,4 +69,11 @@ test("case resolution happens in the right order (original -> camelCase -> Pasca
     expect(camel_class.methodTwo()).toBe(true);
     expect(pascal_class.MethodTwo()).toBe(true);
     expect(snake_class.method_two()).toBe(false);
-})
+});
+
+test("setting snake-case properties will instead set existing camelCase/PascalCase on the target object", () => {
+    camel_class.attribute_one = false;
+    pascal_class.attribute_one = false;
+    expect(camel_class.attributeOne).toBe(false);
+    expect(pascal_class.AttributeOne).toBe(false);
+});

@@ -27,11 +27,12 @@ function snaked(target, use_cache) {
         setget(_target, name, receiver, mode, value) {
             if (use_cache && __resolution_cache.hasOwnProperty(name)) {
                 if (mode === "get") return Reflect.get(_target, __resolution_cache[name], receiver);
-                else if (mode === "set") return Reflect.set(_target, name, value, receiver);
+                else if (mode === "set") return Reflect.set(_target, __resolution_cache[name], value, receiver);
             }
             if (Reflect.has(_target, name)) {
                 if (use_cache) __resolution_cache[name] = name;
-                return Reflect.get(_target, name, receiver);
+                if (mode === "get") return Reflect.get(_target, name, receiver);
+                else if (mode === "set") return Reflect.set(_target, name, value, receiver);
             } else {
                 let camel_case = camelcase(name);
                 if (Reflect.has(_target, camel_case) && snakecase(name) === name) {
@@ -50,7 +51,7 @@ function snaked(target, use_cache) {
                         if (name === "__clear_cache") {
                             return this.__clear_cache;
                         }
-                        // go through the usual (now definitely error-throwing) routine of obtaining an attribute
+                        // go through the usual (now potentially error-throwing) routine of obtaining an attribute
                         if (mode === "get") return Reflect.get(_target, name, receiver);
                         else if (mode === "set") return Reflect.set(_target, name, value, receiver);
                     }
